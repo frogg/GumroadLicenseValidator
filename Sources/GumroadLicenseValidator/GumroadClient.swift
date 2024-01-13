@@ -50,7 +50,7 @@ public final class GumroadClient {
     ///   - licenseKey: Non-empty string, preferably sanitized (remember Little Bobby Tables!)
     ///   - incrementUsesCount: Whether Gumroad should increment count of times a license has been checked
     /// - Returns: `URLRequest` with needed POST parameters
-    func makeRequest(licenseKey: String, productId: String, incrementUsesCount: Bool = true) -> URLRequest? {
+    func makeRequest(licenseKey: String, incrementUsesCount: Bool = true) -> URLRequest? {
         guard productPermalink.isEmpty == false, licenseKey.isEmpty == false else { return nil }
         guard let baseURL = URL(string: "https://api.gumroad.com/v2/licenses/verify"),
               var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
