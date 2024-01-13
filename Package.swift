@@ -6,6 +6,7 @@ import PackageDescription
 let package = Package(
     name: "GumroadLicenseValidator",
     platforms: [
+        .iOS(.v13),
         .macOS(.v12)
     ],
     products: [
